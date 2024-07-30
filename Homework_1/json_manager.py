@@ -1,0 +1,82 @@
+import json
+import os
+
+
+def int_input(prompt=""):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            print("Error.")
+
+
+class JsonManager:
+    def __init__(self):
+        self._user_file = "files/Users.json"
+        self._chats = "files/chats.json"
+
+    def __str__(self):
+        pass
+
+    def add_to_file(self, json_file, data):
+        files = self.read_to_file(json_file)
+        files.update(data)
+        self.write_to_file(json_file, files)
+
+    def read_to_file(self, json_file):
+        try:
+            if os.path.exists(json_file):
+                with open(file=json_file, mode="r", encoding="UTF-8") as file:
+                    files: dict = json.load(file)
+                    self.__str__()
+                    return files
+            else:
+                self.__str__()
+                files = {}
+                return files
+        except json.decoder.JSONDecodeError:
+            files = {}
+            return files
+
+    def write_to_file(self, json_file, user):
+        with open(file=json_file, mode="w", encoding="UTF-8") as file:
+            json.dump(user, file, indent=4)
+        return self.__str__()
+
+    def list_choice(self, user_list: list) -> str or int:
+        x_list = ["choice number"]
+        y_list = []
+        count = 0
+        count_list = []
+        for key, value in enumerate(user_list, 1):
+            x_list.append(f"{key}. {value}")
+            y_list.append(value)
+            count += 1
+            count_list.append(count)
+        print(json.dumps(x_list, indent=4))
+        while True:
+            try:
+                num: int = int(input("number="))
+                if num in count_list:
+                    self.__str__()
+                    return y_list[num - 1]
+                else:
+                    print('wrong input')
+            except ValueError:
+                print("incorrect , only number.")
+
+    def phone_input(self, txt: str):
+        files: dict = self.read_to_file(self._user_file)
+        phone_list = []
+        for i in files.values():
+            phone_list.append(i["phone number"])
+        while True:
+            phone: int = int_input(txt)
+            if 900000000 <= phone <= 999999999:
+                if phone in phone_list:
+                    print("phone number have in base")
+                else:
+                    return phone
+            else:
+                print("exp:918743565...")
+                return self.__str__()

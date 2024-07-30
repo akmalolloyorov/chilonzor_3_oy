@@ -1,0 +1,67 @@
+{
+    "SP346546": {
+        "password": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+        "student_name": "John Uik",
+        "phone_number": 995654265,
+        "group": "n50",
+        "teacher": "Sanjar Ibn Ravshan",
+        "direction": {
+            "Python": {
+                "OOP": {
+                    "lesson_time": "16:00 24.07.2024",
+                    "grade": 5
+                },
+                "Decorators": {
+                    "lesson_time": "24.07.2024",
+                    "grade": 4
+                }
+            },
+            "Java": {
+                "Switch Statements": {
+                    "lesson_time": "24.07.2024",
+                    "grade": 3
+                }
+            }
+        }
+    },
+    "SP654985": {
+        "password": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+        "student_name": "Azim Urazmatov",
+        "phone_number": 995654266,
+        "group": "n50",
+        "teacher": "Sanjar Ibn Ravshan",
+        "direction": {
+            "Python": {
+                "OOP": {
+                    "lesson_time": "16:00 24.07.2024",
+                    "grade": 3
+                },
+                "Decorators": {
+                    "lesson_time": "24.07.2024",
+                    "grade": 5
+                }
+            },
+            "Java": {
+                "Switch Statements": {
+                    "lesson_time": "24.07.2024",
+                    "grade": 5
+                }
+            }
+        }
+    },
+    "TM496108": {
+        "password": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+        "student_name": "Akbar Nurjonov",
+        "phone_number": 951955632,
+        "group": "n80",
+        "teacher": "Nodirbek Masharipov",
+        "direction": {
+            "php": {
+                "Functions": {
+                    "lesson_time": "27.07.2024",
+                    "grade": "none"
+                }
+            }
+        }
+    }
+}

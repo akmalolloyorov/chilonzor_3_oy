@@ -1,0 +1,26 @@
+{
+    "653498652165": {
+        "name": "Boing 787-8",
+        "campaign": "Uzbekistan Airways",
+        "capacity": 150,
+        "from_airport": "Tashkent International Airport",
+        "to_airport": "New York International Airport",
+        "flight_time": "2024-08-01 10:00",
+        "landing_time": "2024-08-01 20:00",
+        "status": true,
+        "tickets": 230,
+        "price": "1200 USD"
+    },
+    "632964515257": {
+        "name": "hfgnkhjyi",
+        "campaign": "fvbgnhjmkl",
+        "capacity": 20,
+        "from_airport": null,
+        "to_airport": null,
+        "flight_time": null,
+        "landing_time": null,
+        "status": null,
+        "tickets": 0,
+        "price": null
+    }
+}

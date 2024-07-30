@@ -1,0 +1,71 @@
+{
+    "TM346545": {
+        "password": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+        "name": "Sanjar Ibn Ravshan",
+        "phone_number": 999999999,
+        "group": {
+            "n50": {
+                "direction": [
+                    "Python",
+                    "Java"
+                ],
+                "students": [
+                    "SP346546",
+                    "SP654985"
+                ]
+            }
+        },
+        "direction": {
+            "Python": {
+                "OOP": {
+                    "lesson_time": "16:00 24.07.2024",
+                    "students": {
+                        "SP346546": 5,
+                        "SP654985": 3
+                    }
+                },
+                "Decorators": {
+                    "lesson_time": "24.07.2024",
+                    "students": {
+                        "SP346546": 4,
+                        "SP654985": 5
+                    }
+                }
+            },
+            "Java": {
+                "Switch Statements": {
+                    "lesson_time": "24.07.2024",
+                    "students": {
+                        "SP346546": 3,
+                        "SP654985": 5
+                    }
+                }
+            }
+        }
+    },
+    "TM956432": {
+        "password": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+        "name": "Nodirbek Masharipov",
+        "phone_number": 950071815,
+        "group": {
+            "n80": {
+                "direction": [
+                    "php"
+                ],
+                "students": [
+                    "TM496108"
+                ]
+            }
+        },
+        "direction": {
+            "php": {
+                "Functions": {
+                    "lesson_time": "27.07.2024",
+                    "students": {
+                        "TM496108": "none"
+                    }
+                }
+            }
+        }
+    }
+}
