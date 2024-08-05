@@ -1,8 +1,8 @@
 import datetime
 import json
 
-USERS_FILE = 'users.txt'
-POSTS_FILE = 'posts.txt'
+USERS_FILE = 'files/users.txt'
+POSTS_FILE = 'files/posts.txt'
 
 
 def load_data(file):
