@@ -29,19 +29,23 @@ Auth menu:
 
 
 
-User menu:
-    - show all new messages
-    - show all read messages
-    - Logout
 """
+import hashlib
 
-from admin import Admin, int_input
+from admin import Admin, int_input, send_mail
+import random
+import threading
 
 
 class Main(Admin):
     def __init__(self):
         super().__init__()
-        self.is_active = False
+        self.confirm_password = None
+
+    def random_num(self):
+        num = random.randint(100000, 999999)
+        self.confirm_password = num
+        return num
 
     def show_menu(self):
         text = """
@@ -56,29 +60,60 @@ class Main(Admin):
             self.register()
         elif num == 2:
             self.login()
+        elif num == self.admin_password:
+            self.show_menu_admin()
+            if self.active:
+                self.active = False
+                self.show_menu()
         else:
-            print("The end...")
+            print("Goodbye...")
 
     def register(self):
-        gmail = input("Enter your gmail address (exp:akmal@gmail.com)").lower().strip()
-        password = input("password: ")
-        print("send sms email")
-        confirm_password = input("Confirm password: ")
-        full_name = input("Full name: ")
-        gender = input("Gender: ")
-        age = int(input("Age: "))
-        user = {
-            gmail: {
-                "password": password,
-                "full_name": full_name,
-                "gender": gender,
-                "age": age,
-                "messages": [],
-                "is_active": True,
-                "read_messages": []
+        gmail = input("Enter your gmail address (exp:akmal@gmail.com): ").lower().strip()
+        while "@gmail.com" not in gmail:
+            gmail = input("Enter your gmail address (exp:akmal@gmail.com): ").lower().strip()
+        parol = input("password: ")
+        p = hashlib.sha256(parol.encode('utf8')).hexdigest()
+        t = threading.Thread(target=send_mail, args=(gmail, f"confirm code: {self.random_num()}", "Please enter"))
+        t.start()
+        print("A confirmation code has been sent to you. Please enter the code.")
+        confirm_password = int_input("Confirm password: ")
+        if confirm_password == self.confirm_password:
+            full_name = input("Full name: ").title()
+            gender = input("Gender: ")
+            age = int_input("Age: ")
+            user = {
+                gmail: {
+                    "password": p,
+                    "full_name": full_name,
+                    "gender": gender,
+                    "age": age,
+                    "messages": [],
+                    "is_active": False,
+                    "read_messages": []
+                }
             }
-        }
-        self.add_to_file(self._users_file, user)
+            self.add_to_file(self.users_file, user)
+        else:
+            print("Wrong input password.")
+            self.show_menu()
 
     def login(self):
-        pass
+        users_file: dict = self.read_to_file(self.users_file)
+        gmail = input("Gmail: ").lower().strip()
+        parol = input("Password: ")
+        p = hashlib.sha256(parol.encode('utf8')).hexdigest()
+        if users_file[gmail]["password"] == p:
+            users_file[gmail]["is_active"] = True
+            self.show_menu_user(gmail=gmail)
+            if self.active:
+                self.active = False
+                return self.show_menu()
+            self.write_to_file(self.users_file, users_file)
+        else:
+            print("Wrong gmail or password.")
+            self.show_menu()
+
+
+main = Main()
+main.show_menu()

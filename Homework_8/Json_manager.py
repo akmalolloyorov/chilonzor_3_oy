@@ -1,5 +1,6 @@
 import json
 import os
+from datetime import datetime
 
 
 def int_input(prompt=""):
@@ -13,7 +14,8 @@ def int_input(prompt=""):
 class JsonManager:
     def __init__(self):
         self.active = False
-        self._users_file = "files/User.json"
+        self.admin_password = 0000
+        self.users_file = "files/User.json"
 
     def __str__(self):
         pass
@@ -82,3 +84,7 @@ class JsonManager:
                 return grade
             else:
                 print("0 <= grade <= 5")
+
+    def current_time(self):
+        self.__str__()
+        return datetime.now().strftime("%Y-%m-%d %H:%M:%S")

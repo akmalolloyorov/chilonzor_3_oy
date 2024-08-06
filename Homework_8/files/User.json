@@ -1,0 +1,33 @@
+{
+    "proaktiv64@gmail.com": {
+        "password": "ef2d127de37b942baad06145e54b0c619a1f22327b2ebbcfbec78f5564afe39d",
+        "full_name": "Akmal Olloyorov",
+        "gender": "male",
+        "age": 20,
+        "messages": [
+            {
+                "Najot talim": {
+                    "time": "2024-08-07 02:38:43",
+                    "massage": "sfjdsklj klk gdgj dfg dfkgj dfdfjsg jdl dfkl dfsklg jdfgjdkg",
+                    "is_read": true
+                }
+            },
+            {
+                "ytyjukl": {
+                    "time": "2024-08-07 02:43:03",
+                    "massage": "ghdjfkglh;hg",
+                    "is_read": true
+                }
+            },
+            {
+                "thyjukiuo": {
+                    "time": "2024-08-07 02:44:07",
+                    "massage": "ttyuio",
+                    "is_read": true
+                }
+            }
+        ],
+        "is_active": true,
+        "read_messages": []
+    }
+}
