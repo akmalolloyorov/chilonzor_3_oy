@@ -13,7 +13,7 @@ def int_input(prompt=""):
 class JsonManager:
     def __init__(self):
         self.active = False
-        self._user_file = "files/User.json"
+        self._users_file = "files/User.json"
 
     def __str__(self):
         pass

@@ -60,7 +60,25 @@ class Main(Admin):
             print("The end...")
 
     def register(self):
-        pass
+        gmail = input("Enter your gmail address (exp:akmal@gmail.com)").lower().strip()
+        password = input("password: ")
+        print("send sms email")
+        confirm_password = input("Confirm password: ")
+        full_name = input("Full name: ")
+        gender = input("Gender: ")
+        age = int(input("Age: "))
+        user = {
+            gmail: {
+                "password": password,
+                "full_name": full_name,
+                "gender": gender,
+                "age": age,
+                "messages": [],
+                "is_active": True,
+                "read_messages": []
+            }
+        }
+        self.add_to_file(self._users_file, user)
 
     def login(self):
         pass
