@@ -27,16 +27,7 @@ Auth menu:
     - Exit
 
 
-Admin menu:
-    - show all users | if you use generator to print users data (ijson)
-    - send message from gmail:
-        0. To all users
-        1. To males
-        2. To females
-        3. Higher from 18
-        4. Lower from 18
-    - show sent message with time
-    - Logout
+
 
 User menu:
     - show all new messages

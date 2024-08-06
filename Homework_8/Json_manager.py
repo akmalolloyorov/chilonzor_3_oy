@@ -12,10 +12,8 @@ def int_input(prompt=""):
 
 class JsonManager:
     def __init__(self):
-        self._student_file = "files/Student.json"
-        self._admin_file = "files/Admin.json"
-        self._teacher_file = "files/Teacher.json"
-        self._super_admin = "files/Super.json"
+        self.active = False
+        self._user_file = "files/User.json"
 
     def __str__(self):
         pass
