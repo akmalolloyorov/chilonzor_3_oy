@@ -1,0 +1,50 @@
+{
+    "111111": {
+        "user": "Sanjarbek",
+        "total_price": 12000,
+        "products": [
+            {
+                "name": "non",
+                "quantity": 2,
+                "price": 300
+            },
+            {
+                "name": "suv",
+                "quantity": 2,
+                "price": 200
+            }
+        ]
+    },
+    "111112": {
+        "user": "Sanjarbek",
+        "total_price": 12000,
+        "products": [
+            {
+                "name": "non",
+                "quantity": 2,
+                "price": 300
+            },
+            {
+                "name": "suv",
+                "quantity": 2,
+                "price": 200
+            }
+        ]
+    },
+    "111113": {
+        "user": "Akmal",
+        "total_price": 10000,
+        "products": [
+            {
+                "name": "non",
+                "quantity": 1,
+                "price": 300
+            },
+            {
+                "name": "suv",
+                "quantity": 1,
+                "price": 200
+            }
+        ]
+    }
+}
